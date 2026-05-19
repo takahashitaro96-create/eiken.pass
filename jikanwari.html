@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>体験授業 時間割 | 塾</title>
+<style>
+  :root {
+    --primary: #1f4e79;
+    --accent: #f4a261;
+    --bg: #faf8f3;
+    --card: #ffffff;
+    --text: #2b2b2b;
+    --muted: #6b6b6b;
+    --border: #e3ddd0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+  }
+  header {
+    background: linear-gradient(135deg, var(--primary), #2c6aa0);
+    color: #fff;
+    padding: 56px 20px 48px;
+    text-align: center;
+  }
+  header h1 {
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    letter-spacing: 0.05em;
+    margin-bottom: 12px;
+  }
+  header p {
+    font-size: 1.05rem;
+    opacity: 0.95;
+  }
+  .badge {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    padding: 6px 16px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    margin-bottom: 18px;
+    letter-spacing: 0.1em;
+  }
+  main {
+    max-width: 960px;
+    margin: -28px auto 0;
+    padding: 0 20px 60px;
+  }
+  .section {
+    background: var(--card);
+    border-radius: 14px;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.06);
+    padding: 36px 28px;
+    margin-bottom: 32px;
+    border: 1px solid var(--border);
+  }
+  .section h2 {
+    color: var(--primary);
+    font-size: 1.35rem;
+    border-left: 6px solid var(--accent);
+    padding-left: 14px;
+    margin-bottom: 6px;
+  }
+  .section .target {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-bottom: 22px;
+  }
+  .day-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+  }
+  .day-card {
+    background: #fdfaf3;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 18px 14px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .day-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  }
+  .day-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed var(--border);
+  }
+  .slot {
+    display: flex;
+    align-items: center;
+    padding: 6px 0;
+    font-size: 0.98rem;
+  }
+  .slot::before {
+    content: "●";
+    color: var(--accent);
+    margin-right: 8px;
+    font-size: 0.7rem;
+  }
+  .level-list .slot {
+    justify-content: space-between;
+    padding: 8px 4px;
+    border-bottom: 1px dotted var(--border);
+  }
+  .level-list .slot:last-child { border-bottom: none; }
+  .level-list .slot::before { display: none; }
+  .level-label {
+    font-weight: 600;
+    color: var(--primary);
+  }
+  .level-time {
+    color: var(--text);
+    font-variant-numeric: tabular-nums;
+  }
+  .cta {
+    text-align: center;
+    margin-top: 30px;
+    padding: 28px 20px;
+    background: linear-gradient(135deg, #fff7ec, #fdecd5);
+    border-radius: 14px;
+    border: 1px solid var(--border);
+  }
+  .cta p {
+    margin-bottom: 14px;
+    font-size: 1.05rem;
+  }
+  .cta a {
+    display: inline-block;
+    background: var(--primary);
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 32px;
+    border-radius: 999px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    transition: background 0.15s ease;
+  }
+  .cta a:hover { background: #163b5d; }
+  footer {
+    text-align: center;
+    padding: 24px 20px;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+</style>
+</head>
+<body>
+<header>
+  <span class="badge">体験授業 受付中</span>
+  <h1>授業 時間割のご案内</h1>
+</header>
+
+<main>
+  <section class="section">
+    <h2>中学生・高校生向け講座</h2>
+    <div class="day-grid">
+      <div class="day-card">
+        <div class="day-name">水曜日</div>
+        <div class="slot">17:50 - 19:00</div>
+        <div class="slot">19:10 - 20:20</div>
+        <div class="slot">20:30 - 21:40</div>
+      </div>
+      <div class="day-card">
+        <div class="day-name">木曜日</div>
+        <div class="slot">19:00 - 20:10</div>
+        <div class="slot">20:20 - 21:30</div>
+      </div>
+      <div class="day-card">
+        <div class="day-name">金曜日</div>
+        <div class="slot">17:00 - 18:10</div>
+        <div class="slot">18:20 - 19:30</div>
+        <div class="slot">19:40 - 20:50</div>
+      </div>
+      <div class="day-card">
+        <div class="day-name">土曜日</div>
+        <div class="slot">14:40 - 15:50</div>
+        <div class="slot">16:00 - 17:10</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>小学生向け講座</h2>
+    <p class="target">英検対策コース(土曜日)</p>
+    <div class="day-grid">
+      <div class="day-card">
+        <div class="day-name">土曜日</div>
+        <div class="level-list">
+          <div class="slot">
+            <span class="level-label">基礎・5級</span>
+            <span class="level-time">9:00 - 9:55</span>
+          </div>
+          <div class="slot">
+            <span class="level-label">3級・4級</span>
+            <span class="level-time">10:00 - 10:55</span>
+          </div>
+          <div class="slot">
+            <span class="level-label">3級・準2級</span>
+            <span class="level-time">11:00 - 11:55</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta">
+    <p>体験授業のご予約・お問い合わせはこちらから</p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfTh3ZupFyIqrFMk88cwAD5t-8eRJ29ScO6jsykt8lGfSzkUA/viewform?usp=send_form" target="_blank" rel="noopener">体験授業を申し込む</a>
+  </div>
+</main>
+
+<footer>
+  &copy; 2026 塾 - All Rights Reserved
+</footer>
+</body>
+</html>
